@@ -1,0 +1,90 @@
+#include <stdio.h>
+void main()
+{
+	// int a = 10;
+	int a;
+
+	printf("정수를 입력하세요. ");
+	scanf_s("%d", &a);
+
+	// if()문을 써서 조건을 체크
+	if ((a % 2) == 0) // 조건이 참일 때만 실행
+	{
+		printf("변수a 값은 짝수입니다.\n");
+	}
+	else // 조건이 거짓일 때 실행
+	{
+		printf("입력받은 a는 홀수입니다.\n");
+	}
+
+	// 키보드로부터 입력받은 정수가 양수인지 음수인지를 판별하고 출력하세요.
+	if (a > 0)
+	{
+		printf("양수입니다.\n");
+	}
+	
+	else
+	{
+		if (a < 0) // 중첩 if
+		{
+			printf("음수입니다.\n");
+		}
+		else
+		{
+			printf("0입니다.\n");
+		}
+	}
+
+	// 키보드로부터 정수 (0~100)를 받아서 학점을 출력하세요.
+	int score;
+	printf("받고싶은 정수를 입력하세요. ");
+	scanf_s("%d", &score);
+
+	// ChatGpt
+	if (score >= 90)
+	{
+		printf("A\n");
+	}
+	else if (score >= 80)
+	{
+		printf("B\n");
+	}
+	else if (score >= 70)
+	{
+		printf("C\n");
+	}
+	else if (score >= 60)
+	{
+		printf("D\n");
+	}
+	else
+	{
+		printf("F\n");
+	}
+
+	// 교수님스타일
+	// 100초과, 또는 0미만을 입력받으면 오류메시지
+	if ((100 <= score) && (score >= 90))
+	{
+		printf("A\n");
+	}
+	else if ((90 > score) && (score >= 80))
+	{
+		printf("B\n");
+	}
+	else if ((80 > score) && (score >= 70))
+	{
+		printf("C\n");
+	}
+	else if ((70 > score) && (score >= 60))
+	{
+		printf("D\n");
+	}
+	else
+	{
+		printf("F\n");
+	}
+	
+	// 조건연산자를 써서 동일하게 바꾸세요.
+	((a % 2) == 0) ? printf("짝수\n") : printf("홀수\n");
+}
