@@ -1,0 +1,95 @@
+#include <stdio.h>
+void main()
+{
+	// 임의의 3개 정수를 키보드로부터 입력 받아
+	// (그중) 제일 작은 수를 출력하세요.
+
+	int a, b, c;
+	/*
+	printf("3개의 정수를 입력하세요.");
+	scanf_s("%d %d %d", &a, &b, &c);
+
+	if (a <= b && a < c)
+		printf("%d", a);
+	else if (b <= a && b < c)
+		printf("%d", b);
+	else
+		printf("%d", c);
+	*/
+
+	// 1개의 정수를 입력받아, 홀수인지 짝수인지를 판단하여 출력
+	// if else 문을 사용
+
+	int x;
+	printf("한 개의 정수를 입력하세요.");
+	scanf_s("%d", &x);
+
+	if ((x % 2) == 0)
+	{
+		printf("짝수\n");
+	}
+	else
+	{
+		printf("홀수\n");
+	}
+
+	// switch case 문
+	switch (x%2)
+	{
+	case 0:
+		printf("짝수입니다\n");
+		break;
+	// case 1:
+	default :
+		printf("홀수입니다\n");
+		break;
+	}
+
+	int m;
+	printf("달(month)을 입력하세요.");
+	scanf_s("%d", &m);
+
+	switch (m)
+	{
+	case 1:
+		printf("31일\n");
+		break;
+	case 2:
+		printf("28일\n");
+		break;
+	case 3:
+		printf("31일\n");
+		break;
+	case 4:
+		printf("30일\n");
+		break;
+	case 5:
+		printf("31일\n");
+		break;
+	case 6:
+		printf("30일\n");
+		break;
+	case 7:
+		printf("31일\n");
+		break;
+	case 8:
+		printf("31일\n");
+		break;
+	case 9:
+		printf("30일\n");
+		break;
+	case 10:
+		printf("31일\n");
+		break;
+	case 11:
+		printf("30일\n");
+		break;
+	case 12:
+		printf("31일\n");
+		break;
+	default :
+		printf("잘못입력하셨습니다.\n");
+		break;
+	}
+	// 30, 31일끼리 묶을수 있음
+}
