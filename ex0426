@@ -1,0 +1,59 @@
+#include <stdio.h>
+void main()
+{
+	// 1개의 정수(점수)를 입력받아, 학점(A,B,C,D,F)를 출력하세요
+	// switch문 사용
+	printf("점수(정수)를 입력하세요 ");
+	// 변수 사용방법 (1)변수선언, (2)값을할당
+
+	int score; //1
+	// score = 100; //2
+	scanf_s("%d", &score);
+
+	switch (score/10) // 나눗셈(몫)을 계산해서 10단위 값을 계산
+	{
+	case 10:
+	case 9:
+		printf("A\n");
+		break;
+	case 8:
+		printf("B\n");
+		break;
+	case 7:
+		printf("C\n");
+		break;
+	case 6:
+		printf("D\n");
+		break;
+	default:
+		printf("F\n");
+		break;
+	}
+
+	/// 이름을 5번 반복해서 출력하세요
+	// for(초기; 조건; 증감) {반복하는 명령;}
+	// 초기 : 반복회수를 카운티하기위한 변수 사용
+	// 조건 : 반복카운트를 세면서 조건에 맞춰 반복을 빠져나오게 함
+	// 증감 : 반복횟수를 증가, 감소시켜 카운팅
+
+	for (int i = 1; i <11; i++)
+	{
+		// 반복카운트가 홀수일때만 출력되게
+		if ((i % 2) == 1)
+		{
+			printf("최요진 %d\n", i); //1~10
+		}
+	}
+	// 2방법
+	for (int i = 1; i < 11; i += 2)
+	{
+		printf("%d\n", i);
+	}
+
+	// 10번 반복
+	printf("---------------\n");
+	for (int i = 0; i < 10; i ++) //0..9
+	{
+		printf("%d\n", i); //0~9
+	}
+}
