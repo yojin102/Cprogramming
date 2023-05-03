@@ -81,7 +81,7 @@ void main()
 	// a<b : 그대로
 	// a>b : a와 b를 바꿔서 계산
 	
-	int s2;
+	int s2 = 0;
 	/*
 	if (a <= b)
 	{
