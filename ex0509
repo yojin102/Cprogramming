@@ -1,0 +1,65 @@
+#include <stdio.h>
+void main()
+{
+	// 중첩 반복문
+	for (int i = 0; i < 10; i++)
+	{
+		// for (int j = 0; j <10; j++)
+		for (int j = 0; j <= i; j++)
+		{
+			printf("*");
+		}
+		printf("\n");
+	}
+
+	// 구구단
+	for (int i = 1; i <= 9; i++)
+	{
+		// 1단
+		// printf("%d*%d=%d\n", 1, i, 1 * i);
+		for (int j = 1; j <= 9; j++) {
+			printf("%d*%d=%2d ", j, i, j * i);
+		}
+		printf("\n");
+	}
+
+	// while문
+	// while (조건) {}	-- 조건이 참일때 반복
+
+	int cnt = 0;
+	int user = 10;
+	// while (user != 0) // 사용자가 0을 입력할 때까지 반복
+	while (cnt < 10) // 10판만 반복
+	{
+		printf("1.가위, 2.바위, 3.보 (0.종료) -- 정수를 입력하세요 ");
+		scanf_s("%d", &user);
+		cnt++;
+		printf("%d\n", user);
+	}
+	printf("%d판 했습니다\n", (cnt-1));
+
+	// while --> for
+	// int cnt = 0; // 초기식
+	int user = 10;
+	// while (user != 0) // 사용자가 0을 입력할 때까지 반복
+	// while (cnt < 10) // 10판만 반복 (조건식)
+	for(int cnt = 0; cnt < 10; cnt++)
+	{
+		printf("1.가위, 2.바위, 3.보 (0.종료) -- 정수를 입력하세요 ");
+		scanf_s("%d", &user);
+		// cnt++; // 증감식
+		printf("%d\n", user);
+	}
+	printf("%d판 했습니다\n", (cnt - 1));
+
+	// do while() -- 먼저 한 번을 실행하고 나서 조건을 체크
+	/*
+	int user = 0;
+	do
+	{
+		printf("1.가위, 2.바위, 3.보 (0.종료) -- 정수를 입력하세요 ");
+		scanf_s("%d", &user);
+		printf("%d\n", user);
+	} while (user != 0);
+	*/
+}
