@@ -1,0 +1,38 @@
+#include <stdio.h>
+void main()
+{
+	// 1~10까지 정수를 출력하세요
+	// for(초기식; 조거식; 증감식) {}
+	// for (int i = 1; i <= 10; i++)
+
+	int sum = 0; //누적합
+	for (int i = 1; i <= 100; i++)
+	{
+		// 1~10 전부 출력
+		// printf("%d\n", i);
+
+		// 짝수(2배수)
+		/*
+		if ((i % 2) == 0)
+		{
+			printf("%d\n", i);
+		}
+		*/
+
+		/*
+		if ((i % 2) == 1)
+		{
+			continue; // 만나면, 반복하는 코드블럭 빠져나오고 계속 반복문을 실행
+			// break;
+		}
+		printf("%d\n", i);
+		*/
+
+		sum = sum + i;
+		if (sum > 1000)
+		{
+			break;
+		}
+	}
+	printf("합은 %d\n", sum);
+}
